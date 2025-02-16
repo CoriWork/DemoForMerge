@@ -14,6 +14,11 @@ public class BallCollisionGame extends JPanel implements ActionListener {
         timer.start();
     }
 
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        ball1.draw(g);
+        ball2.draw(g);
+    }
     private void checkCollision() {
         double dx = ball1.x - ball2.x;
         double dy = ball1.y - ball2.y;
